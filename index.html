@@ -9,16 +9,52 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#15171B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 <style>
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #15171B; }
   a { color: #42A5F5; }
   a:hover { color: #90CAF9; }
   * { box-sizing: border-box; }
+
+  /* ---------- Phones ---------- */
+  @media (max-width: 640px) {
+    /* Nav: logo + button on one row, hide text links */
+    nav { padding: 12px 16px !important; flex-wrap: nowrap !important; }
+    nav > a span { font-size: 17px !important; letter-spacing: 0.04em !important; }
+    nav > a svg { width: 28px; height: 23px; }
+    nav > div > a:not(:last-child) { display: none !important; }
+    nav > div > a:last-child { padding: 10px 14px !important; font-size: 14px !important; white-space: nowrap; }
+
+    /* Tighter sections */
+    section { padding: 48px 16px !important; }
+    section > div { gap: 28px !important; }
+    #top { padding: 40px 16px 48px !important; }
+
+    /* Type sizes */
+    h1 { font-size: 40px !important; letter-spacing: -0.03em !important; }
+    h2 { font-size: 28px !important; }
+    h3 { font-size: 19px !important; }
+    p, blockquote, figcaption { font-size: 15px !important; line-height: 1.5 !important; }
+    #top p { font-size: 16px !important; }
+
+    /* Buttons: full width, stacked */
+    section a[href^="#"], section a[href^="mailto"], section a[href^="tel"] {
+      flex: 1 1 100%; text-align: center; padding: 14px 18px !important; font-size: 16px !important;
+    }
+
+    /* Smaller hero art, cards, code box */
+    #top svg[role="img"] { max-width: 230px !important; }
+    #services div[style*="padding: 28px"], figure { padding: 22px !important; }
+    #contact div[style*="line-height: 1.9"] { font-size: 13px !important; padding: 20px !important; }
+    footer > div { font-size: 13px !important; }
+  }
 </style>
 </head>
 <body>
-<div style="font-family: 'Courier New', Courier, monospace; color: #F5F3EE; background: #15171B; width: 100%">
+<div style="font-family: 'Courier New', 'Courier Prime', Courier, monospace; color: #F5F3EE; background: #15171B; width: 100%">
 
 <!-- NAV -->
 <header style="background: #15171B; border-bottom: 1px solid #2E333A">
@@ -53,7 +89,7 @@
 <g fill="#FFA040"><rect x="146" y="84" width="10" height="10"></rect><rect x="118" y="62" width="8" height="8"></rect><rect x="88" y="104" width="10" height="10"></rect><rect x="176" y="96" width="8" height="8"></rect><rect x="196" y="72" width="8" height="8"></rect><rect x="76" y="20" width="6" height="6" opacity="0.6"></rect><rect x="150" y="34" width="6" height="6" opacity="0.6"></rect></g>
 <g transform="rotate(32 290 90)"><rect x="232" y="56" width="104" height="34" rx="4" fill="#F5F3EE"></rect><rect x="276" y="90" width="16" height="96" rx="3" fill="#F5F3EE"></rect></g>
 <path d="M40 140 H360 C352 168 320 184 280 186 V206 H130 V186 C96 184 66 168 40 140 Z" fill="#F5F3EE"></path>
-<text x="205" y="182" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="44" font-weight="700" fill="#1C1F24">{ }</text>
+<text x="205" y="182" text-anchor="middle" font-family="Courier New, Courier Prime, Courier, monospace" font-size="44" font-weight="700" fill="#1C1F24">{ }</text>
 <g><rect x="120" y="222" width="170" height="8" fill="#F5F3EE"></rect><rect x="108" y="240" width="70" height="8" fill="#42A5F5"></rect><rect x="186" y="240" width="116" height="8" fill="#F5F3EE"></rect><rect x="96" y="258" width="120" height="8" fill="#F5F3EE"></rect><rect x="224" y="258" width="90" height="8" fill="#FFA040"></rect><rect x="84" y="276" width="242" height="8" fill="#F5F3EE"></rect><rect x="72" y="294" width="60" height="8" fill="#42A5F5"></rect><rect x="140" y="294" width="198" height="8" fill="#F5F3EE"></rect></g>
 </svg>
 </div>
